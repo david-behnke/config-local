@@ -22,7 +22,8 @@ leaderElection: true
 args: {}
 
 provider:
-  packages: []
+  packages:
+    - gcp
 
 configuration:
   packages: []
