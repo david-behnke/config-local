@@ -22,7 +22,9 @@ spec:
     jsonPointers:
       - /rules
   syncPolicy:
-    automated: null
+    automated:
+      prune: true
+      selfHeal: true
     syncOptions:
       - CreateNamespace=true
 
