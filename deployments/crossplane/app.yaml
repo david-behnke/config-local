@@ -4,17 +4,14 @@ metadata:
   name: Crossplane
 spec:
   destination:
-    name: ''
     namespace: crossplane-system
     server: 'https://kubernetes.default.svc'
   source:
-    path: ''
     repoURL: 'https://charts.crossplane.io/stable'
     targetRevision: 1.7.0
     chart: crossplane
   project: default
   syncPolicy:
-    automated: null
     syncOptions:
       - CreateNamespace=true
 
