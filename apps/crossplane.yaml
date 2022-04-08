@@ -16,8 +16,14 @@ spec:
       valueFiles:
         - values.yaml
   project: default
+  ignoreDifferences:
+  - group: "crossplane"
+    kind: "ClusterRole"
+    jsonPointers:
+      - /rules
   syncPolicy:
     automated: null
     syncOptions:
       - CreateNamespace=true
+
 
