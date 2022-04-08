@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: Crossplane
+  name: crossplane
 spec:
   destination:
     namespace: crossplane-system
