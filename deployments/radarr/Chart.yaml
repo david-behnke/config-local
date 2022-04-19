@@ -1,0 +1,9 @@
+apiVersion: v2
+name: radarr-subchart
+type: application
+version: 1.0.0
+appVersion: 1.0.0
+dependencies:
+  - name: radarr
+    version: 16.1.0
+    repository: https://k8s-at-home.com/charts/

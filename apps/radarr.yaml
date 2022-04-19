@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: radarr
+  namespace: argocd
+spec:
+  destination:
+    name: ''
+    namespace: radarr
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: deployments/radarr
+    repoURL: 'https://github.com/david-behnke/config-local.git'
+    targetRevision: master
+    helm:
+      valueFiles:
+        - values.yaml
+  project: default
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false
+    syncOptions:
+      - CreateNamespace=true
+
