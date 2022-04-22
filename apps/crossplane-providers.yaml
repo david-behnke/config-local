@@ -12,7 +12,8 @@ spec:
     path: deployments/crossplane-providers
     repoURL: 'https://github.com/david-behnke/config-local.git'
     targetRevision: master
-    directory: {}
+    directory:
+      recurse: true
   project: default
   syncPolicy:
     automated:
