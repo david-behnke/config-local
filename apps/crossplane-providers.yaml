@@ -2,6 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: crossplane-providers
+  namespace: argocd
 spec:
   destination:
     name: ''
@@ -11,10 +12,7 @@ spec:
     path: deployments/crossplane-providers
     repoURL: 'https://github.com/david-behnke/config-local.git'
     targetRevision: master
-    directory:
-      jsonnet:
-        tlas:
-          - {}
+    directory: {}
   project: default
   syncPolicy:
     automated:
