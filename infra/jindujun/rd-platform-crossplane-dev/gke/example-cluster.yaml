@@ -30,8 +30,8 @@ spec:
     autoscaling:
       autoprovisioned: false
       enabled: true
-      maxNodeCount: 5
-      minNodeCount: 1
+      maxNodeCount: 10
+      minNodeCount: 5
     clusterRef:
       name: example-cluster
     config:
