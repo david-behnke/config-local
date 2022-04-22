@@ -27,7 +27,7 @@ provider:
 
 configuration:
   packages:
-    - gcp
+    - provider-gcp
 
 imagePullSecrets:
 - dockerhub
