@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: crossplane-providers
+spec:
+  destination:
+    name: ''
+    namespace: crossplane-system
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: deployments/crossplane-providers
+    repoURL: 'https://github.com/david-behnke/config-local.git'
+    targetRevision: master
+    directory:
+      jsonnet:
+        tlas:
+          - {}
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
