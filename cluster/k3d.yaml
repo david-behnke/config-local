@@ -5,11 +5,10 @@ kind: Simple # internally, we also have a Cluster config, which is not yet avail
 #  hostIP: "127.0.0.1" # where the Kubernetes API will be listening on
 #  hostPort: "6445" # where the Kubernetes API listening port will be mapped to on your host system
 volumes: # repeatable flags are represented as YAML lists
-  - volume: /mnt/user/cache/k8s/hostpath:/hostpath # same as `--volume '/my/host/path:/path/in/node@server:0;agent:*'`
+  - volume: /mnt:/hostpath # same as `--volume '/my/host/path:/path/in/node@server:0;agent:*'`
     nodeFilters:
-      - server:0
-      - agent:*
-#ports:
-#  - port: 8080:80 # same as `--port '8080:80@loadbalancer'`
-#    nodeFilters:
-#      - loadbalancer
+      - all
+ports:
+  - port: 8080:80 # same as `--port '8080:80@loadbalancer'`
+    nodeFilters:
+      - loadbalancer
