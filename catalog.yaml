@@ -9,4 +9,4 @@ spec:
   owner: team-jindujun
   system: cicd
   definition:
-    $text: https://argo.service.foundation.prd.gcp-backbone.com/swagger.json
+    $text: https://github.com/david-behnke/config-local/blob/master/swagger.json
