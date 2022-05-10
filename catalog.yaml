@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: argocd-api
+  description: API to interact with ArgoCD
+spec:
+  type: openapi
+  lifecycle: production
+  owner: team-jindujun
+  system: cicd
+  definition:
+    $text: https://argo.service.foundation.prd.gcp-backbone.com/swagger.json
